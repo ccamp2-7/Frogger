@@ -293,7 +293,7 @@ always@(posedge clk or negedge rst)  begin
     game_over <= 0;
   end else if (!game_over) begin
     for (i = 0; i < 24; i = i + 1) begin
-	   if(frog_x >= car_position_x[i] && frog_x < car_position_x[i] + 40 && frog_y >= car_position_y[i] && frog_y < car_position_y[i] + 20) begin
+	    if(frog_x >= car_position_x[i] && frog_x < car_position_x[i] + 40 && frog_y + 15 >= car_position_y[i] && frog_y < car_position_y[i] + 20) begin
 		  game_over <= 1;
 		end
    end
